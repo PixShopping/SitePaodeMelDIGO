@@ -7,8 +7,8 @@
 		<title>Pao de Mel DiGo</title>
 		
     <style>
-	    @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@900&display=swap');
-	    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+	    /*@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@900&display=swap');
+	    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');*/
     </style>
         
 		<style scoped>
@@ -40,7 +40,7 @@
     
     .navbar-left {
 	    position: absolute;
-    	left: 8%;
+    	left: -2%;
     	top: 55%;
     	transform: translate(-50%, -50%);
 	    width: 70px;
@@ -49,18 +49,18 @@
     	display: flex;
     	justify-content: flex-start;
     	align-items: center;
+    	rotate: 90deg;
     }.navbar-left .triangulo {
     	border-left: 35px solid transparent;
     	border-right: 35px solid transparent;
     	border-bottom: 35px solid var(--terceira);
-    	width: 0%;
-    	height: 100%;
-    	rotate: 90deg;
+    	width: 100%;
+    	height: 105%;
     }
     
     .navbar-right {
 	    position: absolute;
-    	left: 92%;
+    	left: 82%;
     	top: 55%;
     	transform: translate(-50%, -50%);
     	width: 70px;
@@ -69,13 +69,13 @@
     	display: flex;
     	justify-content: flex-end;
     	align-items: center;
+    	rotate: 90deg;
     }.navbar-right .triangulo {
     	border-left: 35px solid transparent;
     	border-right: 35px solid transparent;
     	border-top: 35px solid var(--terceira);
-    	width: 0%;
-    	height: 100%;
-    	rotate: 90deg;
+    	width: 100%;
+    	height: 105%;
     }
     
     /*---------------------------
@@ -218,14 +218,16 @@
     .contato-content ion-icon {
     	font-size: 25px;
     	margin-right: 25px;
+    	color: var(--segunda);
     }
     
     .contato-content h2 {
     	font-size: 19px;
-    	font-weight: 500;
+    	font-weight: 900;
     	text-transform: uppercase;
     	margin-top: 1px;
     	margin-bottom: 4px;
+    	color: var(--segunda);
     }
     
     .contato-content a {
@@ -233,6 +235,12 @@
     	font-weight: 900;
     	color: white;
     	cursor: pointer;
+    }
+    
+    .contato-content a:hover {
+    	color: #999;
+    	text-shadow: 0 0 10px #aaa;
+    	transition: all .3s ease-in-out;
     }
     
     .numero {
@@ -247,8 +255,8 @@
     }
     
     .contacts form h1 {
-    	font-size: 20px;
- 		 font-weight: 800;
+    	font-size: 21px;
+ 		 font-weight: 600;
     }
     
     .contacts form label {
@@ -263,6 +271,9 @@
     	border: none;
     	outline: none;
     	padding-left: 10px;
+    	background-color: var(--segunda);
+    	color: white;
+    	box-shadow: 2px 2px 1px var(--terceira)/*#8C442B*/;
     }
     
     .contacts form textarea {
@@ -274,6 +285,32 @@
     	margin-bottom: 10px;
     	height: 45px;
     	width: 200px;
+    	background-color: var(--segunda);
+    	color: white;
+    	box-shadow: 2px 2px 1px var(--terceira)
+    }
+    
+    /* BUTTON ENVIAR */
+    #btn-pedido {
+    	margin-top: 9px;
+    	height: 30px;
+    	width: 200px;
+    	border-radius: 5px;
+    	border: none;
+    	outline: none;
+    	padding: 0px;
+    	background-color: var(--segunda);
+    	color: white;
+    	cursor: pointer;
+    	box-shadow: 0 0 5px var(--segunda);
+    	font-size: 16.5px;
+    }
+    
+    #btn-pedido:hover {
+    	background-color: var(--terceira);
+    	color: #232323;
+    	transition: all .3s ease-in-out;
+    	box-shadow: 0 0 10px var(--terceira);
     }
     
     
@@ -516,7 +553,7 @@
    				
    				<div class="numero">
 	   				<h2>Whatsapp</h2>
-	   				<a href="#">+55 (16) 99783-8464</a>
+	   				<a href="https://wa.me/5516997838464">+55 (16) 99783-8464</a>
    				</div>
    			
    			</div>
@@ -529,7 +566,7 @@
    				
    				<div class="numero">
 	   				<h2>E-mail</h2>
-	   				<a href="#">majoisamarga@gmail.com</a>
+	   				<a href="#">paodemelDIGO@gmail.com</a>
    				</div>
    			
    			</div>
@@ -553,12 +590,12 @@
    			<h1>Faça seu pedido agora mesmo!</h1>
    		
    			<label>Nome</label>
-   			<input type="text" required/>
+   			<input type="text" required />
    			<label>Telefone</label>
-   			<input type="text" required/>
+   			<input type="number" required />
    			<label>Mensagem</label>
    			<textarea></textarea>
-   			<input type="submit">
+   			<input id="btn-pedido" type="submit" />
    		
    		</form>
    		
