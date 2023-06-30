@@ -40,7 +40,7 @@
     
     .navbar-left {
 	    position: absolute;
-    	left: -2%;
+    	left: 8vw;
     	top: 55%;
     	transform: translate(-50%, -50%);
 	    width: 70px;
@@ -49,18 +49,20 @@
     	display: flex;
     	justify-content: flex-start;
     	align-items: center;
-    	rotate: 90deg;
-    }.navbar-left .triangulo {
+    }
+    
+    .navbar-left .triangulo {
     	border-left: 35px solid transparent;
     	border-right: 35px solid transparent;
     	border-bottom: 35px solid var(--terceira);
     	width: 100%;
     	height: 105%;
+    	transform: rotate(90deg);
     }
     
     .navbar-right {
 	    position: absolute;
-    	left: 82%;
+    	left: 91.5vw;
     	top: 55%;
     	transform: translate(-50%, -50%);
     	width: 70px;
@@ -69,13 +71,15 @@
     	display: flex;
     	justify-content: flex-end;
     	align-items: center;
-    	rotate: 90deg;
-    }.navbar-right .triangulo {
+    }
+    
+    .navbar-right .triangulo {
     	border-left: 35px solid transparent;
     	border-right: 35px solid transparent;
     	border-top: 35px solid var(--terceira);
     	width: 100%;
     	height: 105%;
+    	transform: rotate(90deg);
     }
     
     /*---------------------------
@@ -106,8 +110,21 @@
     
     .navbar a {
     	color:	white;
-    	margin: 7%;
     	font-size: 16px;
+    	height: 99%;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	display: flex;
+    	align-items: center;
+    	text-align: center;
+    	background-color: var(--primeira);
+    }
+    
+    .navbar a:hover {
+    	color: var(--primeira);
+    	background-color: var(--terceira);
+    	opacity: 0.7;
+    	transition: all .3s ease-in-out;
     }
     
     .navbar img {
@@ -115,14 +132,15 @@
     	top: 50%;
     	left: 50%;
     	transform: translate(-50%, -50%);
-    	width: 20%;
-    	height: 130px;
+    	width: 25%;
+    	height: 135px;
     	min-height: 130px;
     	border: 2px solid #232323;
+    	border-radius: 10px;
     }
     
     .navbar-text-left {
-    	width: 40%;
+    	width: 37.5%;
     	height: 100%;
     	position: absolute;
     	top: 50%;
@@ -130,11 +148,13 @@
     	transform: translateY(-50%);
     	display: flex;
     	align-items: center;
-    	justify-content: center;
+    	justify-content: space-around;
+    	padding-left: 5px;
+    	padding-right: 5px;
     }
     
     .navbar-text-right {
-    	width: 40%;
+    	width: 37.5%;
     	height: 100%;
     	position: absolute;
     	top: 50%;
@@ -142,7 +162,9 @@
     	transform: translateY(-50%);
     	display: flex;
     	align-items: center;
-    	justify-content: center;
+    	justify-content: space-around;
+    	padding-left: 5px;
+    	padding-right: 5px;
     }
     
     /*---------
@@ -159,7 +181,7 @@
     
     .detalhe div {
     	width: 40%;
-    	height: 3.5px;
+    	height: 3px;
     	margin: 10px;
     	background-color: var(--primeira);
     }
@@ -444,15 +466,15 @@
    	<nav class="navbar">
    		
    		<div class="navbar-text-left">
-	   		<a href="#">About Cafe</a>
-	   		<a href="#">Cur Menu</a>
+	   		<a href="./index.html">Pagina Inicial</a>
+	   		<a href="#">Doces</a>
    		</div>
    		
    			<img src="./IMG/"/>
    		
    		<div class="navbar-text-right">
-	   		<a href="#">Reservation</a>
-	   		<a href="#contacts">Contacts</a>
+	   		<a href="#">Produtos</a>
+	   		<a href="#contacts">Contato</a>
    		</div>
    		
    	</nav>
@@ -468,16 +490,16 @@
    		
    		<div class="detalhe">
    			<div></div>
-   			<img id="detalhe-img" src="./IMG/detalhe.jpg"/>
+   			<img id="detalhe-img" src="./IMG/detalhe.png"/>
    			<div></div>
    		</div>
    		
    		<div class="produtos">
    			
    			<!-- PRODUTO 1 -->
-   			<div class="produto">
+  			 	<div class="produto">
    				
-   				<img src="./IMG/.png"/>
+   				<img src="./IMG/produto.png"/>
    				<h1>Pao de Mel</h1>
    				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
    				
@@ -485,8 +507,7 @@
 	   				<div class="detalhado"></div>
 		   				<div class="more">
 		   					<a>Mais info</a>
-		   					<div class="triangulo">
-		   					</div>
+		   					<div class="triangulo"></div>
 		   				</div>
 		   			<div class="detalhado"></div>
    				</div>
@@ -496,7 +517,7 @@
    			<!-- PRODUTO 2 -->
    			<div class="produto">
    				
-   				<img src="./IMG/.png"/>
+   				<img src="./IMG/produto.png"/>
    				<h1>Pao de Mel</h1>
    				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
    				
@@ -516,7 +537,7 @@
    			<!-- PRODUTO 3 -->
    			<div class="produto">
    				
-   				<img src="./IMG/.png"/>
+   				<img src="./IMG/produto.png"/>
    				<h1>Pao de Mel</h1>
    				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
    				
