@@ -1,0 +1,582 @@
+<!DOCTYPE html
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="./IMG/icon.png" type="x-icon">
+		<title>Pao de Mel DiGo</title>
+		
+    <style>
+	    @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@900&display=swap');
+	    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+    </style>
+        
+		<style scoped>
+
+		:root {
+			--primeira: #4C170F;
+			--segunda: #8C442B;
+			--terceira: #FDEDC9;
+    	--text: #191919;
+    }
+			
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+    }
+			
+		body {
+      font-family: 'Arial';
+			background: var(--terceira);
+			color: var(--text);
+			user-select: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+    }
+    
+    .navbar-left {
+	    position: absolute;
+    	left: 8%;
+    	top: 55%;
+    	transform: translate(-50%, -50%);
+	    width: 70px;
+    	height: 70px;
+    	background-color: var(--primeira);
+    	display: flex;
+    	justify-content: flex-start;
+    	align-items: center;
+    }.navbar-left .triangulo {
+    	border-left: 35px solid transparent;
+    	border-right: 35px solid transparent;
+    	border-bottom: 35px solid var(--terceira);
+    	width: 0%;
+    	height: 100%;
+    	rotate: 90deg;
+    }
+    
+    .navbar-right {
+	    position: absolute;
+    	left: 92%;
+    	top: 55%;
+    	transform: translate(-50%, -50%);
+    	width: 70px;
+    	height: 70px;
+    	background-color: var(--primeira);
+    	display: flex;
+    	justify-content: flex-end;
+    	align-items: center;
+    }.navbar-right .triangulo {
+    	border-left: 35px solid transparent;
+    	border-right: 35px solid transparent;
+    	border-top: 35px solid var(--terceira);
+    	width: 0%;
+    	height: 100%;
+    	rotate: 90deg;
+    }
+    
+    /*---------------------------
+					    NAVGATION
+    -----------------------------*/
+    
+    .navgation {
+    	width: 100vw;
+    	height: 250px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	position: relative;
+    }
+    
+    .navbar {
+    	width: 80vw;
+    	height: 80px;
+    	background: var(--primeira);
+    	box-shadow: 0 0 10px #232323;
+    	position: relative;
+    	z-index: 10;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    	align-items: center;
+    }
+    
+    .navbar a {
+    	color:	white;
+    	margin: 7%;
+    	font-size: 16px;
+    }
+    
+    .navbar img {
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	width: 20%;
+    	height: 130px;
+    	min-height: 130px;
+    	border: 2px solid #232323;
+    }
+    
+    .navbar-text-left {
+    	width: 40%;
+    	height: 100%;
+    	position: absolute;
+    	top: 50%;
+    	left: 0;
+    	transform: translateY(-50%);
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+    
+    .navbar-text-right {
+    	width: 40%;
+    	height: 100%;
+    	position: absolute;
+    	top: 50%;
+    	right: 0;
+    	transform: translateY(-50%);
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+    
+    /*---------
+    	DETALHE
+    ----------*/
+    
+    .detalhe {
+    	width: 95vw;
+    	height: 100px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    }
+    
+    .detalhe div {
+    	width: 40%;
+    	height: 3.5px;
+    	margin: 10px;
+    	background-color: var(--primeira);
+    }
+    
+    #detalhe-img {
+    	width: 20%;
+    	height: 100%;
+    	border: 2px solid #232323;
+    }
+    
+    /*-----------------------
+				  	CONTATO
+    -----------------------*/
+    
+    .contacts {
+    	width: 100vw;
+    	height: 370px;
+    	background: var(--primeira);
+    	color: white;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-around;
+    	align-items: center;
+    	padding-left: 6%;
+	    padding-right: 6%;
+	    padding-top: 25px;
+    }
+    
+    .contacts ion-icon {
+    	font-size: 24px;
+    	color: #f1f1f1;
+    	margin-right: 5px;
+    }
+    
+    .contato {
+    	display: flex;
+    	flex-direction: column;
+    	align-items: flex-start;
+    	color: white;
+    	width: 40%;
+    }
+    
+    .contato h1 {
+ 		 font-size: 28px;
+ 		 font-weight: 700;
+    	margin-bottom: 25px;
+    	/*text-shadow: 0 0 10px white;*/
+    }
+    
+    .contato-content {
+    	width: 100%;
+    	display: flex;
+    	margin-bottom: 20px;
+    }
+    
+    .contato-content ion-icon {
+    	font-size: 25px;
+    	margin-right: 25px;
+    }
+    
+    .contato-content h2 {
+    	font-size: 19px;
+    	font-weight: 500;
+    	text-transform: uppercase;
+    	margin-top: 1px;
+    	margin-bottom: 4px;
+    }
+    
+    .contato-content a {
+    	font-size: 16px;
+    	font-weight: 900;
+    	color: white;
+    	cursor: pointer;
+    }
+    
+    .numero {
+    	display: flex;
+    	flex-direction: column;
+    }
+    
+    .contacts form {
+    	display: flex;
+    	flex-direction: column;
+    	align-items: flex-start;
+    }
+    
+    .contacts form h1 {
+    	font-size: 20px;
+ 		 font-weight: 800;
+    }
+    
+    .contacts form label {
+    	margin-top: 12px;
+    	margin-bottom: 3px;
+    }
+    
+    .contacts form input {
+    	height: 28px;
+    	width: 200px;
+    	border-radius: 2px;
+    	border: none;
+    	outline: none;
+    	padding-left: 10px;
+    }
+    
+    .contacts form textarea {
+    	border-radius: 2px;
+    	border: none;
+    	outline: none;
+    	padding-left: 10px;
+    	padding-top: 3px;
+    	margin-bottom: 10px;
+    	height: 45px;
+    	width: 200px;
+    }
+    
+    
+    
+    /*-------------------------
+	   			 CONTAINER
+    -------------------------*/
+    
+    .container{
+    	width: 100vw;
+    	height: 950px;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    }
+    
+    .container img {
+    	width: 90%;
+    	height: 400px;
+    	border: 2px solid #232323;
+    }
+    
+    .produtos {
+    	width: 90vw;
+    	height: 400px;
+    	/*border: 2px solid #232323;*/
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    }
+    
+    .produto {
+    	width: 200px;
+    	height: 90%;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	border: 3px solid var(--segunda);
+    	border-radius: 2px;
+    	padding: 5px;
+    	text-align: center;
+    	margin: 10px;
+    }
+    
+    .produto img {
+    	width: 95%;
+    	max-height: 170px;
+    	border: 2px solid black;
+    }
+    
+    .produto h1 {
+    	margin-top: 5px;
+    	font-size: 24px;
+    	font-weight: 600;
+    	color: var(--segunda);
+    }
+    
+    .produto p {
+    	margin-top: 5px;
+    	font-size: 17px;
+    	font-weight: 300;
+    	color: #232323;
+    }
+    
+    .more {
+    	margin-top: 10px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	width: 110px;
+    	height: 45px;
+    	background-color: var(--segunda);
+    	position: relative;
+    }
+    
+    .more a {
+    	margin-bottom: 12.5px;
+    	color: var(--terceira);
+    	cursor: pointer;
+    	font-size: 14px;
+    	text-transform: uppercase;
+    }
+    
+    .more .triangulo {
+    	border-right: 85px solid transparent;
+    	border-left: 85px solid transparent;
+    	border-bottom: 15px solid var(--terceira);
+    	width: 0%;
+    	height: 0%;
+    	position: absolute;
+    	bottom: 0;
+    	left: 50%;
+    	transform: translateX(-50%);
+    }
+    
+    .detalhes {
+    	width: 100%;
+    	height: 50px;
+    	display: flex;
+    	justify-content: center;
+    }
+    
+    .detalhado {
+    	margin-top: 10px;
+    	margin-left: px;
+    	margin-right: px;
+    	width: 32px;
+    	height: 2px;
+    	background-color: var(--segunda);
+    }
+    
+    </style>
+   </head>
+   
+   <body>
+   	
+   	<!------------------
+		   		NAVGATION
+   	------------------->
+   	
+    <nav class="navgation">
+   	
+   	<div class="navbar-left">
+	   		<div class="triangulo"></div>
+   	</div>
+   	
+   	<div class="navbar-right">
+	   		<div class="triangulo"></div>
+   	</div>
+   	
+   	<nav class="navbar">
+   		
+   		<div class="navbar-text-left">
+	   		<a href="#">About Cafe</a>
+	   		<a href="#">Cur Menu</a>
+   		</div>
+   		
+   			<img src="./IMG/"/>
+   		
+   		<div class="navbar-text-right">
+	   		<a href="#">Reservation</a>
+	   		<a href="#contacts">Contacts</a>
+   		</div>
+   		
+   	</nav>
+    </nav>
+   	
+   	<!------------------
+		   		CONTAINER
+   	------------------->
+   	
+   	<div class="container">
+   		
+   		<img src="./IMG/container.jpg"/>
+   		
+   		<div class="detalhe">
+   			<div></div>
+   			<img id="detalhe-img" src="./IMG/detalhe.jpg"/>
+   			<div></div>
+   		</div>
+   		
+   		<div class="produtos">
+   			
+   			<!-- PRODUTO 1 -->
+   			<div class="produto">
+   				
+   				<img src="./IMG/.png"/>
+   				<h1>Pao de Mel</h1>
+   				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
+   				
+   				<div class="detalhes">
+	   				<div class="detalhado"></div>
+		   				<div class="more">
+		   					<a>Mais info</a>
+		   					<div class="triangulo">
+		   					</div>
+		   				</div>
+		   			<div class="detalhado"></div>
+   				</div>
+   				
+   			</div>
+   			
+   			<!-- PRODUTO 2 -->
+   			<div class="produto">
+   				
+   				<img src="./IMG/.png"/>
+   				<h1>Pao de Mel</h1>
+   				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
+   				
+   				<div class="detalhes">
+	   				<div class="detalhado"></div>
+		   				<div class="more">
+		   					<a>Mais info</a>
+		   					<div class="triangulo">
+		   					</div>
+		   				</div>
+		   			<div class="detalhado"></div>
+   				</div>
+   				
+   			</div>
+   			
+   			
+   			<!-- PRODUTO 3 -->
+   			<div class="produto">
+   				
+   				<img src="./IMG/.png"/>
+   				<h1>Pao de Mel</h1>
+   				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
+   				
+   				<div class="detalhes">
+	   				<div class="detalhado"></div>
+		   				<div class="more">
+		   					<a>Mais info</a>
+		   					<div class="triangulo">
+		   					</div>
+		   				</div>
+		   			<div class="detalhado"></div>
+   				</div>
+   				
+   			</div>
+   			
+   		</div>
+   		
+   	</div>
+   	
+   	<!------------------
+	   			CONTACTS
+   	------------------->
+   	
+   	<footer id="contacts" class="contacts">
+   		
+   		<div class="contato">
+   			<h1>Entre em contato</h1>
+   			
+   			<div class="contato-content">
+   				
+   				<div>
+	   				<ion-icon name="logo-whatsapp"></ion-icon>
+   				</div>
+   				
+   				<div class="numero">
+	   				<h2>Whatsapp</h2>
+	   				<a href="#">+55 (16) 99783-8464</a>
+   				</div>
+   			
+   			</div>
+   			
+   			<div class="contato-content">
+   				
+   				<div>
+	   				<ion-icon name="mail-outline"></ion-icon>
+   				</div>
+   				
+   				<div class="numero">
+	   				<h2>E-mail</h2>
+	   				<a href="#">majoisamarga@gmail.com</a>
+   				</div>
+   			
+   			</div>
+   			
+   			<div class="contato-content">
+   				
+   				<div>
+	   				<ion-icon name="logo-instagram"></ion-icon>
+   				</div>
+   				
+   				<div class="numero">
+	   				<h2>Instagram</h2>
+	   				<a href="#">@paodemelDIGO</a>
+   				</div>
+   			
+   			</div>
+   			
+   		</div>
+   		
+   		<form>
+   			<h1>Faça seu pedido agora mesmo!</h1>
+   		
+   			<label>Nome</label>
+   			<input type="text" required/>
+   			<label>Telefone</label>
+   			<input type="text" required/>
+   			<label>Mensagem</label>
+   			<textarea></textarea>
+   			<input type="submit">
+   		
+   		</form>
+   		
+   	</footer>
+   	
+   </body>
+   	
+   	<!-------------------------------
+	   					JAVASCRIPT
+   	--------------------------------->
+   
+   	<script>
+   	
+   	
+   	   	
+   	</script>
+   	
+   	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+</html>
