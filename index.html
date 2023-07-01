@@ -180,11 +180,22 @@
 	position: relative;
     }
     
-    .detalhe div {
+    .detalhe #detalhe1 {
     	width: 40%;
     	height: 1.5px;
     	margin: 10px;
     	background-color: var(--primeira);
+        position: absolute;
+	left: 0;
+    }
+
+    .detalhe #detalhe2 {
+    	width: 40%;
+    	height: 1.5px;
+    	margin: 10px;
+    	background-color: var(--primeira);
+        position: absolute;
+	right: 0;
     }
     
     #detalhe-img {
@@ -494,9 +505,9 @@
    		<img src="./IMG/container.jpg"/>
    		
    		<div class="detalhe">
-   			<div></div>
+   			<div id="detalhe1"></div>
    			<img id="detalhe-img" src="./IMG/detalhe.png"/>
-   			<div></div>
+   			<div id="detalhe2"></div>
    		</div>
    		
    		<div class="produtos">
