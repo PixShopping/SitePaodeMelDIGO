@@ -1,978 +1,275 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="./IMG/icon.png" type="x-icon">
-		<title>Pao de Mel DIGO</title>
+		<link rel="icon" href="./imagem/icon.png" type="x-icon">
+		<link type="stylesheet" src="./style.css">
+		<title>Pao de mel DIGO</title>
 		
-    <style>
-	    /*@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@900&display=swap');
-	    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');*/
-    </style>
-        
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+		</style>
+		
 		<style scoped>
-
+	
 		:root {
-			--primeira: #4C170F;
-			--segunda: #8C442B;
-			--terceira: #FDEDC9;
-    	--text: #191919;
-    }
-			
-		*{
-			padding: 0;
-			margin: 0;
-			border: 0;
+			--primeira: #3C1814;
+			--segunda: #682C21;
+			--terceira: #1B0907;
+			--quarta: #A3533E;
+			--quinta: #C07F72;
+			--fontJose: 'Josefin Sans', sans-serif;
+			--fontChela: 'Chela One', cursive;
+		}
+		
+		* {
+			padding: 0px;
+			margin: 0px;
 			box-sizing: border-box;
-			text-decoration: none;
-    }
-			
+		}
+		
 		body {
-      font-family: 'Arial';
-			background: var(--terceira);
-			color: var(--text);
-			user-select: none;
+			background-color: var(--t);
+			color: white;
+			font-family: var(--fontJose);
+		}
+		
+		.navContainer {
+			width: 100vw;
+			height: 90vh;
+			background-color: var(--primeira);
+			background-image: url(./IMG/container.jpg);
+			background-size: cover;
+			background-position: start start;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-    }
-    
-    .navbar-left {
-	    position: absolute;
-    	left: 8vw;
-    	top: 55%;
-    	transform: translate(-50%, -50%);
-	    width: 70px;
-    	height: 70px;
-    	background-color: var(--primeira);
-    	display: flex;
-    	justify-content: flex-start;
-    	align-items: center;
-    }
-    
-    .navbar-left .triangulo {
-    	border-left: 35px solid transparent;
-    	border-right: 35px solid transparent;
-    	border-bottom: 35px solid var(--terceira);
-    	width: 100%;
-    	height: 105%;
-    	transform: rotate(90deg);
-    }
-    
-    .navbar-right {
-	    position: absolute;
-    	left: 91.5vw;
-    	top: 55%;
-    	transform: translate(-50%, -50%);
-    	width: 70px;
-    	height: 70px;
-    	background-color: var(--primeira);
-    	display: flex;
-    	justify-content: flex-end;
-    	align-items: center;
-    }
-    
-    .navbar-right .triangulo {
-    	border-left: 35px solid transparent;
-    	border-right: 35px solid transparent;
-    	border-top: 35px solid var(--terceira);
-    	width: 100%;
-    	height: 105%;
-    	transform: rotate(90deg);
-    }
-    
-    /*---------------------------
-					    NAVGATION
-    -----------------------------*/
-    
-    .navgation {
-    	width: 100vw;
-    	height: 250px;
-    	display: flex;
-    	justify-content: center;
-    	align-items: center;
-    	position: relative;
-    }
-    
-    .navbar {
-    	width: 80vw;
-    	height: 80px;
-    	background: var(--primeira);
-    	box-shadow: 0 0 10px #232323;
-    	position: relative;
-    	z-index: 10;
-    	display: flex;
-    	flex-direction: row;
-    	justify-content: center;
-    	align-items: center;
-    }
-    
-    .navbar a {
-    	color:	white;
-    	font-size: 16px;
-    	height: 99%;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	display: flex;
-    	align-items: center;
-    	text-align: center;
-    	background-color: var(--primeira);
-    }
-    
-    .navbar a:hover {
-    	color: var(--primeira);
-    	background-color: var(--terceira);
-    	opacity: 0.7;
-    	transition: all .3s ease-in-out;
-    }
-    
-    .navbar img {
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%);
-    	width: 25%;
-    	height: 135px;
-    	min-height: 130px;
-    	border: 2px solid #232323;
-    	border-radius: 10px;
-    }
-    
-    .navbar-text-left {
-    	width: 37.5%;
-    	height: 100%;
-    	position: absolute;
-    	top: 50%;
-    	left: 0;
-    	transform: translateY(-50%);
-    	display: flex;
-    	align-items: center;
-    	justify-content: space-around;
-    	padding-left: 5px;
-    	padding-right: 5px;
-    }
-    
-    .navbar-text-right {
-    	width: 37.5%;
-    	height: 100%;
-    	position: absolute;
-    	top: 50%;
-    	right: 0;
-    	transform: translateY(-50%);
-    	display: flex;
-    	align-items: center;
-    	justify-content: space-around;
-    	padding-left: 5px;
-    	padding-right: 5px;
-    }
-    
-    /*---------
-    	DETALHE
-    ----------*/
-    
-    .detalhe {
-    	width: 90vw;
-    	height: 100px;
-    	display: flex;
-    	justify-content: center;
-    	align-items: center;
-	position: relative;
-    }
-    
-    .detalhe #detalhe1 {
-    	width: 42%;
-    	height: 0.9px;
-    	background-color: var(--primeira);
-        position: absolute;
-	left: 0;
-    }
-
-    .detalhe #detalhe2 {
-    	width: 42%;
-    	height: 0.9px;
-    	background-color: var(--primeira);
-        position: absolute;
-	right: 0;
-    }
-    
-    #detalhe-img {
-    	width: 17%;
-	height: 165%;
-	border: none;
-	position: absolute;
-	top: 47.5%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-    }
-
-    @media (max-width: 650px){
-      #detalhe-img {
-	width: 22%;
-	height: 120%;
-	top: 48.5%;
-      }
-
-      .detalhe #detalhe1, .detalhe #detalhe2 {
-	width: 39%;
-	height: 0.75px;
-      }
-	    
-    }	
-    
-    /*-----------------------
-				  	CONTATO
-    -----------------------*/
-    
-    .contacts {
-    	width: 100vw;
-    	height: 370px;
-    	background: var(--primeira);
-    	color: white;
-    	display: flex;
-    	flex-direction: row;
-    	justify-content: space-around;
-    	align-items: center;
-    	padding-left: 6%;
-	    padding-right: 6%;
-	    padding-top: 25px;
-    }
-    
-    .contacts ion-icon {
-    	font-size: 24px;
-    	color: #f1f1f1;
-    	margin-right: 5px;
-    }
-    
-    .contato {
-    	display: flex;
-    	flex-direction: column;
-    	align-items: flex-start;
-    	color: white;
-    	width: 40%;
-    }
-    
-    .contato h1 {
- 		 font-size: 28px;
- 		 font-weight: 700;
-    	margin-bottom: 25px;
-    	/*text-shadow: 0 0 10px white;*/
-    }
-    
-    .contato-content {
-    	width: 100%;
-    	display: flex;
-    	margin-bottom: 20px;
-    }
-    
-    .contato-content ion-icon {
-    	font-size: 25px;
-    	margin-right: 25px;
-    	color: var(--segunda);
-    }
-    
-    .contato-content h2 {
-    	font-size: 19px;
-    	font-weight: 900;
-    	text-transform: uppercase;
-    	margin-top: 1px;
-    	margin-bottom: 4px;
-    	color: var(--segunda);
-    }
-    
-    .contato-content a {
-    	font-size: 16px;
-    	font-weight: 900;
-    	color: white;
-    	cursor: pointer;
-    }
-    
-    .contato-content a:hover {
-    	color: #999;
-    	text-shadow: 0 0 10px #aaa;
-    	transition: all .3s ease-in-out;
-    }
-    
-    .numero {
-    	display: flex;
-    	flex-direction: column;
-    }
-    
-    .contacts form {
-    	display: flex;
-    	flex-direction: column;
-    	align-items: flex-start;
-    }
-    
-    .contacts form h1 {
-    	font-size: 21px;
- 		 font-weight: 600;
-    }
-    
-    .contacts form label {
-    	margin-top: 12px;
-    	margin-bottom: 3px;
-    }
-    
-    .contacts form input {
-    	height: 28px;
-    	width: 200px;
-    	border-radius: 2px;
-    	border: none;
-    	outline: none;
-    	padding-left: 10px;
-    	background-color: var(--segunda);
-    	color: white;
-    	box-shadow: 2px 2px 1px var(--terceira)/*#8C442B*/;
-    }
-    
-    .contacts form textarea {
-    	border-radius: 2px;
-    	border: none;
-    	outline: none;
-    	padding-left: 10px;
-    	padding-top: 3px;
-    	margin-bottom: 10px;
-    	height: 45px;
-    	width: 200px;
-    	background-color: var(--segunda);
-    	color: white;
-    	box-shadow: 2px 2px 1px var(--terceira)
-    }
-    
-    /* BUTTON ENVIAR */
-    #btn-pedido {
-    	margin-top: 9px;
-    	height: 30px;
-    	width: 200px;
-    	border-radius: 5px;
-    	border: none;
-    	outline: none;
-    	padding: 0px;
-    	background-color: var(--segunda);
-    	color: white;
-    	cursor: pointer;
-    	box-shadow: 0 0 5px var(--segunda);
-    	font-size: 16.5px;
-    }
-    
-    #btn-pedido:hover {
-    	background-color: var(--terceira);
-    	color: #232323;
-    	transition: all .3s ease-in-out;
-    	box-shadow: 0 0 10px var(--terceira);
-    }
-    
-    
-    
-    /*-------------------------
-	   			 CONTAINER
-    -------------------------*/
-    
-    .container{
-    	width: 100vw;
-    	height: 950px;
-    	display: flex;
-    	flex-direction: column;
-    	align-items: center;
-    }
-    
-    .container img {
-    	width: 90%;
-    	height: 400px;
-    	border: 2px solid #232323;
-    }
-    
-    .produtos {
-    	width: 90vw;
-    	height: 400px;
-    	/*border: 2px solid #232323;*/
-    	display: flex;
-    	justify-content: center;
-    	align-items: center;
-    }
-    
-    .produto {
-    	width: 200px;
-    	height: 90%;
-    	display: flex;
-    	flex-direction: column;
-    	align-items: center;
-    	border: 3px solid var(--segunda);
-    	border-radius: 2px;
-    	padding: 5px;
-    	text-align: center;
-    	margin: 10px;
-    }
-    
-    .produto img {
-    	width: 95%;
-    	max-height: 170px;
-    	border: 2px solid black;
-    }
-    
-    .produto h1 {
-    	margin-top: 5px;
-    	font-size: 24px;
-    	font-weight: 600;
-    	color: var(--segunda);
-    }
-    
-    .produto p {
-    	margin-top: 5px;
-    	font-size: 17px;
-    	font-weight: 300;
-    	color: #232323;
-    }
-    
-    .more {
-    	margin-top: 10px;
-    	display: flex;
-    	justify-content: center;
-    	align-items: center;
-    	width: 110px;
-    	height: 45px;
-    	background-color: var(--segunda);
-    	position: relative;
-    }
-    
-    .more a {
-    	margin-bottom: 12.5px;
-    	color: var(--terceira);
-    	cursor: pointer;
-    	font-size: 14px;
-    	text-transform: uppercase;
-    }
-    
-    .more .triangulo {
-    	border-right: 85px solid transparent;
-    	border-left: 85px solid transparent;
-    	border-bottom: 15px solid var(--terceira);
-    	width: 0%;
-    	height: 0%;
-    	position: absolute;
-    	bottom: -2;
-    	left: 50%;
-    	transform: translateX(-50%);
-    }
-    
-    .detalhes {
-    	width: 100%;
-    	height: 50px;
-    	display: flex;
-    	justify-content: center;
-    }
-    
-    .detalhado {
-    	margin-top: 10px;
-    	margin-left: px;
-    	margin-right: px;
-    	width: 32px;
-    	height: 2px;
-    	background-color: var(--segunda);
-    }
-    
-    /* ANIMAÇAO */
-    
-    [data-anime] {
-    	opacity: 0;
-    	transition: .5s;
-    }
-    
-    [data-anime="left"] {
-    	transform: translate3d(-50px, 0, 0);
-    }
-    
-    [data-anime].animate {
-    	opacity: 1;
-    	transform: translate3d(0px, 0px, 0px);
-    }
-    
-    </style>
-   </head>
-   
-   <body>
-   	
-   	<!------------------
-		   		NAVGATION
-   	------------------->
-   	
-    <nav class="navgation">
-   	
-   	<div class="navbar-left">
-	   		<div class="triangulo"></div>
-   	</div>
-   	
-   	<div class="navbar-right">
-	   		<div class="triangulo"></div>
-   	</div>
-   	
-   	<nav class="navbar">
-   		
-   		<div class="navbar-text-left">
-	   		<a href="./index.html">Pagina Inicial</a>
-	   		<a href="#">Doces</a>
-   		</div>
-   		
-   			<img src="./IMG/"/>
-   		
-   		<div class="navbar-text-right">
-	   		<a href="#">Produtos</a>
-	   		<a href="#contacts">Contato</a>
-   		</div>
-   		
-   	</nav>
-    </nav>
-   	
-   	<!------------------
-		   		CONTAINER
-   	------------------->
-   	
-   	<div class="container">
-   		
-   		<img src="./IMG/container.jpg"/>
-   		
-   		<div class="detalhe">
-   			<div id="detalhe1"></div>
-   			<img id="detalhe-img" src="./IMG/detalhe.png"/>
-   			<div id="detalhe2"></div>
-   		</div>
-   		
-   		<div class="produtos">
-   			
-   			<!-- PRODUTO 1 -->
-  			 	<div class="produto">
-   				
-   				<img src="./IMG/produto.png"/>
-   				<h1>Pao de Mel</h1>
-   				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
-   				
-   				<div class="detalhes">
-	   				<div class="detalhado"></div>
-		   				<div class="more">
-		   					<a>Mais info</a>
-		   					<div class="triangulo"></div>
-		   				</div>
-		   			<div class="detalhado"></div>
-   				</div>
-   				
-   			</div>
-   			
-   			<!-- PRODUTO 2 -->
-   			<div class="produto">
-   				
-   				<img src="./IMG/produto.png"/>
-   				<h1>Pao de Mel</h1>
-   				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
-   				
-   				<div class="detalhes">
-	   				<div class="detalhado"></div>
-		   				<div class="more">
-		   					<a>Mais info</a>
-		   					<div class="triangulo">
-		   					</div>
-		   				</div>
-		   			<div class="detalhado"></div>
-   				</div>
-   				
-   			</div>
-   			
-   			
-   			<!-- PRODUTO 3 -->
-   			<div class="produto">
-   				
-   				<img src="./IMG/produto.png"/>
-   				<h1>Pao de Mel</h1>
-   				<p>O pao de mel mais gostoso e bonito de araraquara/SP</p>
-   				
-   				<div class="detalhes">
-	   				<div class="detalhado"></div>
-		   				<div class="more">
-		   					<a>Mais info</a>
-		   					<div class="triangulo">
-		   					</div>
-		   				</div>
-		   			<div class="detalhado"></div>
-   				</div>
-   				
-   			</div>
-   			
-   		</div>
-   		
-   	</div>
-   	
-   	<!------------------
-	   			CONTACTS
-   	------------------->
-   	
-   	<footer id="contacts" class="contacts">
-   		
-   		<div class="contato" data-anime="left">
-   			<h1>Entre em contato</h1>
-   			
-   			<div class="contato-content">
-   				
-   				<div>
-	   				<ion-icon name="logo-whatsapp"></ion-icon>
-   				</div>
-   				
-   				<div class="numero">
-	   				<h2>Whatsapp</h2>
-	   				<a href="https://wa.me/5516997838464">+55 (16) 99783-8464</a>
-   				</div>
-   			
-   			</div>
-   			
-   			<div class="contato-content">
-   				
-   				<div>
-	   				<ion-icon name="mail-outline"></ion-icon>
-   				</div>
-   				
-   				<div class="numero">
-	   				<h2>E-mail</h2>
-	   				<a href="#">paodemelDIGO@gmail.com</a>
-   				</div>
-   			
-   			</div>
-   			
-   			<div class="contato-content">
-   				
-   				<div>
-	   				<ion-icon name="logo-instagram"></ion-icon>
-   				</div>
-   				
-   				<div class="numero">
-	   				<h2>Instagram</h2>
-	   				<a href="#">@paodemelDIGO</a>
-   				</div>
-   			
-   			</div>
-   			
-   		</div>
-   		
-   		<form data-anime="left">
-   			<h1>Faça seu pedido agora mesmo!</h1>
-   		
-   			<label>Nome</label>
-   			<input type="text" required />
-   			<label>Telefone</label>
-   			<input type="number" required />
-   			<label>Mensagem</label>
-   			<textarea></textarea>
-   			<input id="btn-pedido" type="submit" />
-   		
-   		</form>
-   		
-   	</footer>
-   	
-   </body>
-   	
-   	<!-------------------------------
-	   					JAVASCRIPT
-   	--------------------------------->
-   
-   	<script>
-   	
-   	const target = document.querySelectorAll("[data-anime]");
-   	const animationClass = 'animate';
-   	
-   	function animeScroll() {
-   		const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-   		target.forEach(function(element) {
-   			if((windowTop) > element.offsetTop){
-   				element.classList.add(animationClass);
-   			} else {
-	   			element.classList.remove(animationClass);
-   			}
-   		});
-   	}
-   	
-   	if(target.length) {
-	   	window.addEventListener("scroll", function() {
-	   		animeScroll();
-	   	});
-   	}
-   	
-   	//Pego
-   	   	 	  	 	   	 	  	 	   	 	  	 	
-   	</script>
-   	
-   	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+			justify-content: center;
+		}
+		
+		.navContent {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 50px;
+		}
+		
+		.navContent h1 {
+			font-family: var(--fontChela);
+			font-size: 42px;
+			letter-spacing: 0px;
+			margin-bottom: 10px;
+		}
+		
+		.navContent p {
+			font-family: var(--fontJose);
+			font-size: 16px;
+			margin-bottom: 20px;
+			line-height: 23px;
+			letter-spacing: 1.25px;
+		}
+		
+		.navContent button {
+			width: 175px;
+			height: 42px;
+			border: none;
+			border-radius: 2.5px;
+			background-color: var(--segunda);
+			color: white;
+			font-family: var(--fontChela);
+			font-size: 21px;
+			outline: none;
+			cursor: pointer;
+		}
+		
+		/* CONTAINER */
+		
+		.container {
+			width: 100vw;
+			height: 500px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: var(--quarta);
+		}
+		
+		.content {
+			width: 85vw;
+			height: auto;
+			padding: 30px;
+			background-color: var(--segunda);
+			border-radius: 10px;
+			margin-top: -40px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.content h1 {
+			margin-top: 5px;
+			margin-bottom: 20px;
+			font-family: var(--fontChela);
+			font-size: 30px;
+		}
+		
+		.content p {
+			font-family: var(--fontJose);
+			font-size: 14.5px;
+			margin-bottom: 20px;
+			line-height: 18px;
+			letter-spacing: 1.10px;
+			width: 82%;
+		}
+		
+		#setaEsquerda {
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		#setaDireita {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		.main-carrossel {
+			width: 300px;
+			height: 275px;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.main-carrossel ion-icon {
+			font-size: 30px;
+			cursor: pointer;
+		}
+		
+		#img {
+			width: 300px;
+			height: 275px;
+			border: none;
+		}
+		
+		.carrossel {
+			width: auto;
+			height: 100%;
+			display: flex;
+			list-style: none;
+			transition: all .8s ease-in-out;
+		}
+		
+		.carrossel li {
+			width: 100%;
+			height: 100%;
+		}
+		
+		</style>
+	</head>
+		
+	<body>
+		
+		<header class="navContainer">
+			
+			<section class="navContent">
+				
+				<h1>Pao de mel Digo</h1>
+				<p>Delicie-se com nosso irresistivel pao de <br>mel! Feito com carinho e ingredientes  <br>de alta qualidade, cada mordida e uma  <br>explosao de sabores deliciosos</p>
+				<button>Compre ja o seu</button>
+			
+			</section>
+				
+		</header>
+		
+		<main class="container">
+			
+			<section class="content">
+				<h1>Doces</h1>
+				<p>Alem do nosso pao de mel classico, tambem oferecemos uma variedade de sabores e combinaçoes criativas, como pao de mel com amendoas caramelizadas, cobertura de chocolate branca ou ate mesmo com recheios exoticos, como maracuja ou caramelo salgado. Nao importa qual seja a sua preferencia, temos um pao de mel perfeito para voce.</p>
+				
+				<div class="main-carrossel">
+					<ion-icon id="setaEsquerda" name="arrow-back"></ion-icon>
+					<ion-icon id="setaDireita" name="arrow-forward"></ion-icon>
+					
+					<ul class="carrossel">
+						
+						<li class="img1 selecionado">
+							<img id="img" src="./IMG/img1.jpg">
+						</li>
+						
+						<li class="img2">
+							<img id="img" src="./IMG/img2.jpg">
+						</li>
+						
+						<li class="img3">
+							<img id="img" src="./IMG/img3.jpg">
+						</li>
+						
+					</ul>
+					
+				</div>
+				
+			</section>
+		
+		</main>
+	
+	<!--------------------------------------
+									JAVASCRIPT
+	--------------------------------------->
+	
+		<script>
+		var img1 = document.querySelector(".img1")
+		var img2 = document.querySelector(".img2")
+		var img3 = document.querySelector(".img3");
+		
+		var final = 0;
+		var selecionado = "selecionado";
+		var docSelecionado = document.querySelector(".selecionado");
+		var carrossel = document.querySelector(".carrossel");
+		var setaEsquerda = document.querySelector("#setaEsquerda");
+		var setaDireita = document.querySelector("#setaDireita");
+		setaDireita.addEventListener("click", () => {
+			if (img1.classList.contains(selecionado)){
+				carrossel.style.marginLeft = "-100%";
+				img1.classList.remove(selecionado);
+				img2.classList.add(selecionado);
+			} else if (img2.classList.contains(selecionado)){
+				carrossel.style.marginLeft = "-200%";
+				img2.classList.remove(selecionado);
+				img3.classList.add(selecionado);
+			} else if (img3.classList.contains(selecionado)){
+				carrossel.style.marginLeft = "0%";
+				img3.classList.remove(selecionado);
+				img1.classList.add(selecionado);
+			}
+		});
+		setaEsquerda.addEventListener("click", () => {
+			if (img1.classList.contains(selecionado)){
+				carrossel.style.marginLeft = "-200%";
+				img1.classList.remove(selecionado);
+				img3.classList.add(selecionado);
+			} else if (img3.classList.contains(selecionado)){
+				carrossel.style.marginLeft = "-100%";
+				img3.classList.remove(selecionado);
+				img2.classList.add(selecionado);
+			} else if (img2.classList.contains(selecionado)){
+				carrossel.style.marginLeft = "0%";
+				img2.classList.remove(selecionado);
+				img1.classList.add(selecionado);
+			}
+		});
+					
+											
+		</script>
+	
+	</body>
+	
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   
-   <head>
-   	
-   	<style scoped>
-   	
-	   	/*========================
-			   		CSS MOBILE
-	    =========================*/
-	    
-	    @media (max-width: 700px) {
-	    	
-	    	/*-----------------------
-					  	CONTATO
-	   	 -----------------------*/
-	    
-	    .contacts {
-	    	width: 100vw;
-	    	height: auto;
-	    	background: var(--primeira);
-	    	color: white;
-	    	display: flex;
-	    	flex-direction: column;
-	    	justify-content: center;
-	    	align-items: flex-start;
-	    	padding-left: 6%;
-		    padding-right: 6%;
-		    padding-top: 30px;
-		    padding-bottom: 30px;
-	    }
-	    
-	    .contacts ion-icon {
-	    	font-size: 24px;
-	    	color: #f1f1f1;
-	    	margin-right: 5px;
-	    }
-	    
-	    .contato {
-	    	display: flex;
-	    	flex-direction: column;
-	    	align-items: flex-start;
-	    	color: white;
-	    	width: 100%;
-	    	padding-left: 10px;
-	    	padding-right: 10px;
-	    	margin-top: 10px;
-	    }
-	    
-	    .contato h1 {
-	 		 font-size: 28px;
-	 		 font-weight: 700;
-	    	margin-bottom: 25px;
-	    	/*text-shadow: 0 0 10px white;*/
-	    }
-	    
-	    .contato-content {
-	    	width: 100%;
-	    	display: flex;
-	    	margin-bottom: 20px;
-	    }
-	    
-	    .contato-content ion-icon {
-	    	font-size: 25px;
-	    	margin-right: 25px;
-	    	color: var(--segunda);
-	    }
-	    
-	    .contato-content h2 {
-	    	font-size: 19px;
-	    	font-weight: 900;
-	    	text-transform: uppercase;
-	    	margin-top: 1px;
-	    	margin-bottom: 4px;
-	    	color: var(--segunda);
-	    }
-	    
-	    .contato-content a {
-	    	font-size: 16px;
-	    	font-weight: 900;
-	    	color: white;
-	    	cursor: pointer;
-	    }
-	    
-	    .contato-content a:hover {
-	    	color: #999;
-	    	text-shadow: 0 0 10px #aaa;
-	    	transition: all .3s ease-in-out;
-	    }
-	    
-	    .numero {
-	    	display: flex;
-	    	flex-direction: column;
-	    }
-	    
-	    .contacts form {
-	    	display: flex;
-	    	flex-direction: column;
-	    	align-items: flex-start;
-	    	margin-top: 20px;
-	    	margin-left: 10px;
-	    }
-	    
-	    .contacts form h1 {
-	    	font-size: 21px;
-	 		 font-weight: 600;
-	    }
-	    
-	    .contacts form label {
-	    	margin-top: 12px;
-	    	margin-bottom: 3px;
-	    }
-	    
-	    .contacts form input {
-	    	height: 28px;
-	    	width: 200px;
-	    	border-radius: 2px;
-	    	border: none;
-	    	outline: none;
-	    	padding-left: 10px;
-	    	background-color: var(--segunda);
-	    	color: white;
-	    	box-shadow: 2px 2px 1px var(--terceira)/*#8C442B*/;
-	    }
-	    
-	    .contacts form textarea {
-	    	border-radius: 2px;
-	    	border: none;
-	    	outline: none;
-	    	padding-left: 10px;
-	    	padding-top: 3px;
-	    	margin-bottom: 10px;
-	    	height: 45px;
-	    	width: 200px;
-	    	background-color: var(--segunda);
-	    	color: white;
-	    	box-shadow: 2px 2px 1px var(--terceira)
-	    }
-	    
-	    /* BUTTON ENVIAR */
-	    #btn-pedido {
-	    	margin-top: 9px;
-	    	height: 30px;
-	    	width: 200px;
-	    	border-radius: 5px;
-	    	border: none;
-	    	outline: none;
-	    	padding: 0px;
-	    	background-color: var(--segunda);
-	    	color: white;
-	    	cursor: pointer;
-	    	box-shadow: 0 0 5px var(--segunda);
-	    	font-size: 16.5px;
-	    }
-	    
-	    #btn-pedido:hover {
-	    	background-color: var(--terceira);
-	    	color: #232323;
-	    	transition: all .3s ease-in-out;
-	    	box-shadow: 0 0 10px var(--terceira);
-	    }
-	    
-	    /*-------------------------
-		   			 CONTAINER
-	    -------------------------*/
-	    
-	    .container{
-	    	width: 100vw;
-	    	height: auto;
-	    	display: flex;
-	    	flex-direction: column;
-	    	align-items: center;
-	    }
-	    
-	    .container img {
-	    	width: 90%;
-	    	height: 400px;
-	    	border: 2px solid #232323;
-	    }
-	    
-	    .produtos {
-	    	width: 90vw;
-	    	height: auto;
-	    	display: flex;
-	    	justify-content: center;
-	    	align-items: center;
-	    	flex-wrap: wrap;
-	    	padding-top: 10px;
-	    	padding-bottom: 20px;
-	    }
-	    
-	    .produto {
-	    	width: 200px;
-	    	height: 350px;
-	    	display: flex;
-	    	flex-direction: column;
-	    	align-items: center;
-	    	border: 3px solid var(--segunda);
-	    	border-radius: 2px;
-	    	padding: 5px;
-	    	text-align: center;
-	    	margin: 10px;
-	    }
-	    
-	    .produto img {
-	    	width: 95%;
-	    	max-height: 170px;
-	    	border: 2px solid black;
-	    }
-	    
-	    .produto h1 {
-	    	margin-top: 5px;
-	    	font-size: 24px;
-	    	font-weight: 600;
-	    	color: var(--segunda);
-	    }
-	    
-	    .produto p {
-	    	margin-top: 5px;
-	    	font-size: 17px;
-	    	font-weight: 300;
-	    	color: #232323;
-	    }
-	    
-	    .more {
-	    	margin-top: 10px;
-	    	display: flex;
-	    	justify-content: center;
-	    	align-items: center;
-	    	width: 110px;
-	    	height: 45px;
-	    	background-color: var(--segunda);
-	    	position: relative;
-	    }
-	    
-	    .more a {
-	    	margin-bottom: 12.5px;
-	    	color: var(--terceira);
-	    	cursor: pointer;
-	    	font-size: 14px;
-	    	text-transform: uppercase;
-	    }
-	    
-	    .more .triangulo {
-	    	border-right: 85px solid transparent;
-	    	border-left: 85px solid transparent;
-	    	border-bottom: 15px solid var(--terceira);
-	    	width: 0%;
-	    	height: 0%;
-	    	position: absolute;
-	    	bottom: -2;
-	    	left: 50%;
-	    	transform: translateX(-50%);
-	    }
-	    
-	    .detalhes {
-	    	width: 100%;
-	    	height: 50px;
-	    	display: flex;
-	    	justify-content: center;
-	    }
-	    
-	    .detalhado {
-	    	margin-top: 10px;
-	    	margin-left: px;
-	    	margin-right: px;
-	    	width: 32px;
-	    	height: 2px;
-	    	background-color: var(--segunda);
-	    }	
-	    			
-	   }
-   				
-   	</style>
-   
-   </head>
-   
+	
 </html>
