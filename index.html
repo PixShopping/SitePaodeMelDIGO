@@ -468,8 +468,8 @@
 		[data-elemento="right"] {
                  margin-right: -50px;
 		}
-
-		[data-elemento].animationElementos {
+		
+		.animationElementos {
                  opacity: 1;
 		 margin: 0px;
 		}
@@ -592,7 +592,7 @@
 		const elementos = document.querySelectorAll("[data-elemento]");
                 const animationElementos = "animationElementos";
 
-		function animateElementos() {
+		function animeElementos() {
 		 const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
 		 elementos.forEach(funtion(element) {
 		  if((windowTop) > element.offsetTop) {
@@ -708,7 +708,7 @@
 				
 		window.addEventListener('scroll', function() {
 			animeScroll();
-			animateElementos();
+			animeElementos();
 		});
 		
 		
