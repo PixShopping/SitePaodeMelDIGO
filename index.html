@@ -458,7 +458,7 @@
 		
 	         [data-elemento] {
                   opacity: 0;
-                  transition: all 1s ease-in-out;
+                  transition: all .8s ease-in-out;
 	         }
 
 		[data-elemento="left"] {
@@ -466,7 +466,7 @@
 		}
 
 		[data-elemento="right"] {
-                 margin-right: -50px;
+                 margin-right: 50px;
 		}
 		
 		.animationElementos {
@@ -593,7 +593,7 @@
                 const animationElementos = "animationElementos";
 
 		function animeElementos() {
-		 const windowTop = window.pageYOffset + ((window.innerHeight * 2) / 4);
+		 const windowTop = window.pageYOffset + ((window.innerHeight * 1) / 4);
 		 elementos.forEach(function(element) {
 		  if((windowTop) > element.offsetTop) {
 	           element.classList.add(animationElementos);
