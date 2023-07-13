@@ -593,7 +593,7 @@
                 const animationElementos = "animationElementos";
 
 		function animateElementos() {
-		 const windowTop = (window.pageYOffset * 3) / 4;
+		 const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
 		 elementos.forEach(funtion(element) {
 		  if( (windowTop) > element.offsetTop) {
 	           element.classList.add(animationElementos);
