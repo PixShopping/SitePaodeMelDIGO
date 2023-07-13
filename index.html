@@ -31,7 +31,7 @@
 		}
 		
 		body {
-			background-color: var(--quarta);
+			background-color: var(--primeira);
 			color: white;
 			font-family: var(--fontJose);
 			width: 100vw;
@@ -42,10 +42,10 @@
 		.navContainer {
 			position: fixed;
 			width: 100vw;
-			height: 90vh;
+			height: 450px;
 			top: 0;
 			left: 0;
-			background-color: var(--primeira);
+			background-color: var(--quarta);
 			background-image: url(./IMG/container.jpg);
 			background-size: cover;
 			background-position: center;
@@ -92,6 +92,12 @@
 			cursor: pointer;
 		}
 		
+		.navContent button:hover {
+			border: 2px solid var(--quarta);
+			background: transparent;
+			color: var(--terceira);
+		}
+		
 		/* CONTAINER */
 		
 		.container {
@@ -103,7 +109,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			background-color: var(--quarta);
+			background-color: var(--primeira);
 			z-index: 2;
 		}
 		
@@ -245,7 +251,7 @@
 			align-items: flex-start;
 			justify-content: flex-start;
 			padding: 50px;
-			background-color: var(--primeira);
+			background-color: var(--segunda);
 			color: white;
 		}
 		
@@ -270,6 +276,178 @@
 			align-self: center;
 			text-transform: uppercase;
 			color: var(--quinta);
+			display: flex;
+			align-items: center;
+		}
+		
+		.sobre ion-icon {
+			font-size: 24px;
+			margin: 4px;
+		}
+		
+		/*-----------------
+					CONTATO
+		-----------------*/
+		
+		.contato {
+			width: 100vw;
+			height: auto;
+			border-top: 2px solid var(--segunda);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: 30px;
+		}
+		
+		.redes-sociais {
+			width: 50%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			color: white;
+		}
+		
+		.position-redes {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		
+		.redes-sociais h1 {
+			font-size: 28px;
+			font-weight: 600;
+			font-family: var(--fontChela);
+			margin-bottom: 20px;
+		}
+		
+		.contact {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			height: 50px;
+			margin-bottom: 10px;
+		}
+		
+		.contact ion-icon {
+			font-size: 24px;
+			color: var(--segunda);
+			margin-right: 10px;
+			margin-bottom: 3px;
+		}
+		
+		.contact div {
+			display: flex;
+			flex-direction: column;
+			margin-left: 5px;
+		}
+		
+		.contact div h1 {
+			color: var(--segunda);
+			margin-bottom: 3px;
+			font-family: var(--fontJose);
+			font-size: 24px;
+		}
+		
+		.contact div a {
+			color: white;
+			font-family: var(--fontJose);
+			font-size: 16px;
+		}
+		
+		/* FORMULARIO */
+		
+		.formulario {
+			width: 50%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.formulario form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		
+		.formulario h1 {
+			font-size: 22px;
+			font-weight: 600;
+			font-family: var(--fontChela);
+			margin-bottom: 20px;
+		}
+		
+		.formulario label {
+			font-family: var(--fontJose);
+			font-size: 14px;
+			color: white;
+			letter-spacing: 1px;
+			margin-bottom: 3px;
+		}
+		
+		.formulario input {
+			width: 90%;
+			height: 30px;
+			margin-bottom: 15px;
+			background: var(--segunda);
+			box-shadow: 2px 2px 1px var(--quinta);
+			outline: none;
+			border: none;
+			padding-left: 10px;
+			color: white;
+		}
+		
+		.formulario textarea {
+			width: 90%;
+			height: 55px;
+			margin-bottom: 15px;
+			background: var(--segunda);
+			box-shadow: 2px 2px 1px var(--quinta);
+			outline: none;
+			border: none;
+			padding-left: 10px;
+			padding-top: 10px;
+			color: white;
+		}
+		
+		.formulario #botao {
+			width: 90%;
+			height: 35px;
+			box-shadow: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+			margin-bottom: 0px;
+		}
+		
+		@media (max-width: 700px) {
+			
+			.contato {
+				flex-direction: column;
+				padding-left: 50px;
+			}
+			
+			.redes-sociais {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			
+			.formulario {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				margin-top: 50px;
+			}
+			
 		}
 		
 		</style>
@@ -328,7 +506,55 @@
 				<h2><ion-icon name="arrow-down-outline"></ion-icon>Peça ja o seu<ion-icon name="arrow-down-outline"></ion-icon></h2>
 				
 			</section>
-		
+			
+			<section class="contato">
+				
+				<div class="redes-sociais">
+					
+					<div class="position-redes">
+					<h1>Entre em contato</h1>
+					
+					<div class="contact">
+						<ion-icon name="logo-whatsapp"></ion-icon>
+						<div><h1>Whatsapp</h1>
+						<a>+55 (16) 99783-8464</a></div>
+					</div>
+					
+					<div class="contact">
+						<ion-icon name="logo-instagram"></ion-icon>
+						<div><h1>Instagram</h1>
+						<a>@paodemelDIGO</a></div>
+					</div>
+					
+					<div class="contact">
+						<ion-icon name="mail-outline"></ion-icon>
+						<div><h1>E-mail</h1>
+						<a>paodemelDIGO@gmail.com</a></div>
+					</div>
+					
+					</div>	
+				</div>
+				
+				<div class="formulario">
+					<form>
+						<h1>Faça seu pedido agora mesmo!</h1>
+						
+						<label>Nome</label>
+						<input id="nome" type="text">
+						
+						<label>Telefone</label>
+						<input id="nome" type="number">
+						
+						<label>Mensagem</label>
+						<textarea></textarea>
+						
+						<input id="botao" type="submit">
+						
+					</form>
+				</div>
+				
+			</section>
+			
 		</main>
 	
 	<!--------------------------------------
