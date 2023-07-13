@@ -454,8 +454,28 @@
 				margin-top: 50px;
 			}
 			
-		}
+		}       
 		
+	         [data-elemento] {
+                  opacity: 0;
+                  transition: all .5s ease-in-out;
+	         }
+
+		[data-elemento="left"] {
+                 margin-left: -50px;
+		}
+
+		[data-elemento="right"] {
+                 margin-right: -50px;
+		}
+
+		[data-elemento].animationElementos {
+                 opacity: 1;
+		 margin: 0px;
+		}
+
+
+			
 		</style>
 	</head>
 		
@@ -515,7 +535,7 @@
 			
 			<section class="contato">
 				
-				<div class="redes-sociais">
+				<div data-elemento="left" class="redes-sociais">
 					
 					<div class="position-redes">
 					<h1>Entre em contato</h1>
@@ -542,7 +562,7 @@
 				</div>
 				
 				<div class="formulario">
-					<form>
+					<form data-elemento="right">
 						<h1>Faça seu pedido agora mesmo!</h1>
 						
 						<label>Nome</label>
@@ -570,7 +590,18 @@
 		<script>
 
 		const elementos = document.querySelectorAll("[data-elemento]");
-        const animationElementos = ".animationElementos";
+                const animationElementos = "animationElementos";
+
+		function animateElementos(){
+		 const windowTop = (window.pageYOffset * 3) / 4;
+		 elementos.forEach(funtion(element){
+		  if( (windowTop) > element.offsetTop) {
+	           element.classList.add(animationElementos);
+		  } else {
+		   element.classList.remove(animationElementos);
+		  }
+		 });
+		}
 			
 		//---------------------------------------
 		const botao = document.querySelector(".botao");
@@ -677,6 +708,7 @@
 				
 		window.addEventListener('scroll', function() {
 			animeScroll();
+			animateElementos();
 		});
 		
 		
