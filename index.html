@@ -592,9 +592,9 @@
 		const elementos = document.querySelectorAll("[data-elemento]");
                 const animationElementos = "animationElementos";
 
-		function animateElementos(){
-		 const windowTop = (window.pageYOffset * 3) / 4;
-		 elementos.forEach(funtion(element){
+		function animateElementos() {
+		 const windowTop = ((window.pageYOffset * 3) / 4);
+		 elementos.forEach(funtion(element) {
 		  if( (windowTop) > element.offsetTop) {
 	           element.classList.add(animationElementos);
 		  } else {
