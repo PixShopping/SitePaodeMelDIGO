@@ -38,6 +38,11 @@
 			height: auto;
 			overflow-x: hidden;
 		}
+
+                html, body {
+                 scroll-behavior: smooth;
+		}
+			
 		
 		.navContainer {
 			position: fixed;
@@ -540,7 +545,7 @@
 				
 				<h1 class="element">Pao de mel Digo</h1>
 				<p class="element">Delicie-se com nosso irresistível pão de <br>mel! Feito com carinho e ingredientes  <br>de alta qualidade, cada mordida e uma  <br>explosão de sabores deliciosos</p>
-				<button class="element botao">Compre já o seu</button>
+				<button href="#contato" class="element botao smooth-scroll">Compre já o seu</button>
 			
 			</section>
 				
@@ -642,6 +647,24 @@
 	
 		<script>
 
+                document.addEventListener('DOMContentLoaded', function() {
+  var smoothScrollLinks = document.getElementsByClassName('smooth-scroll');
+  
+  for (var i = 0; i < smoothScrollLinks.length; i++) {
+    smoothScrollLinks[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      var target = document.querySelector(this.hash);
+      
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+                
+			
+		//--------------
 		const elementos = document.querySelectorAll("[data-elemento]");
                 const animationElementos = "animationElementos";
 
