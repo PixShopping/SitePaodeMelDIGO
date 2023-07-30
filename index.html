@@ -65,7 +65,7 @@
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			padding: 50px;
+			padding: 40px;
 		}
 		
 		.navContent h1 {
@@ -95,11 +95,13 @@
 			font-size: 20px;
 			outline: none;
 			cursor: pointer;
+			transition: all .3s ease-in-out;
 		}
 		
 		.navContent button:hover {
-			border: 2px solid var(--quarta);
-			background: transparent;
+			border: 2px solid var(--segunda);
+			background: var(--quarta);
+			color: var(--segunda);
 		}
 		
 		/* CONTAINER */
@@ -827,28 +829,6 @@
 					element.classList.add("animateTen");
 				} else {
 					element.classList.remove("animateTen");
-				}
-				
-				if (element.classList.contains("animateOne")){
-					botao.style.background = "rgba(104, 44, 33, 0.8)";
-				} else if (element.classList.contains("animateTwo")){
-					botao.style.background = "rgba(104, 44, 33, 0.7)";
-				} else if (element.classList.contains("animateTree")){
-					botao.style.background = "rgba(104, 44, 33, 0.6)";
-				} else if (element.classList.contains("animateFour")){
-					botao.style.background = "rgba(104, 44, 33, 0.5)";
-				} else if (element.classList.contains("animateFive")){
-					botao.style.background = "rgba(104, 44, 33, 0.4)";
-				} else if (element.classList.contains("animateSix")){
-					botao.style.background = "rgba(104, 44, 33, 0.3)";
-				} else if (element.classList.contains("animateSeven")){
-					botao.style.background = "rgba(104, 44, 33, 0.2)";
-				} else if (element.classList.contains("animateEight")){
-					botao.style.background = "rgba(104, 44, 33, 0.1)";
-				} else if (element.classList.contains("animateNine")){
-					botao.style.background = "rgba(104, 44, 33, 0)";
-				} else {
-					botao.style.background = "rgba(104, 44, 33, 1)";
 				}
 				
 			});
