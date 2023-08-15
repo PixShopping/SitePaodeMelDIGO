@@ -19,6 +19,7 @@
 			--terceira: #1B0907;
 			--quarta: #A3533E;
 			--quinta: #C07F72;
+			--sexta: #FDEDC9;
 			--fontJose: 'Josefin Sans', sans-serif;
 			--fontChela: 'Chela One', cursive;
 		}
@@ -38,10 +39,9 @@
 			overflow-x: hidden;
 		}
 
-                html, body {
-                 scroll-behavior: smooth;
+    html, body {
+     scroll-behavior: smooth;
 		}
-			
 		
 		.navContainer {
 			position: fixed;
@@ -52,7 +52,7 @@
 			background-color: var(--quarta);
 			background-image: url(./IMG/container.jpg);
 			background-size: cover;
-			background-position: center;
+			background-position: center start;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -65,7 +65,7 @@
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			padding: 40px;
+			padding: 30px;
 		}
 		
 		.navContent h1 {
@@ -108,7 +108,7 @@
 		
 		.container {
 			position: relative;
-			top: 425px;
+			top: 450px;
 			left: 0px;
 			width: 100vw;
 			height: auto;
@@ -122,30 +122,30 @@
 		.content {
 			width: 85vw;
 			height: auto;
-			padding: 30px;
+			padding: 30px 40px 40px 40px;
 			background-color: var(--segunda);
 			border-radius: 10px;
 			margin-top: -40px;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
 		}
 		
 		.content h1 {
-			margin-top: 5px;
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 			font-family: var(--fontChela);
-			font-size: 32px;
-			letter-spacing: 0.5px;
+			font-size: 34px;
+			font-weight: 900;
+			letter-spacing: 1.5px;
 		}
 		
 		.content p {
 			font-family: var(--fontJose);
-			font-size: 14.5px;
+			font-size: 17.5px;
 			margin-bottom: 20px;
 			line-height: 18px;
-			letter-spacing: 1.10px;
-			width: 82%;
+			letter-spacing: 1.05px;
+			width: 94%;
+			text-align: start;
 		}
 		
 		#setaEsquerda {
@@ -163,22 +163,22 @@
 		}
 		
 		.main-carrossel {
-			width: 300px;
-			height: 275px;
+			width: 70vw;
+			height: 70vw;
 			position: relative;
 			overflow: hidden;
-			border-radius: 10px;
+			border-radius: 5px;
 		}
 		
 		.main-carrossel ion-icon {
 			font-size: 25px;
 			cursor: pointer;
-			color: var(--quarta);
+			color: var(--sexta);
 		}
 		
 		#img {
-			width: 300px;
-			height: 275px;
+			width: 70vw;
+			height: 70vw;
 			border: none;
 		}
 		
@@ -187,7 +187,7 @@
 			height: 100%;
 			display: flex;
 			list-style: none;
-			transition: all .8s ease-in-out;
+			transition: all .7s ease-in-out;
 		}
 		
 		.carrossel li {
@@ -246,7 +246,7 @@
 		
 		
 		/*-----------------------
-			  SOBRE
+			 		 SOBRE
 		-----------------------*/
 		
 		.sobre {
@@ -264,14 +264,14 @@
 		}
 		
 		.sobre h1 {
-			font-size: 30px;
+			font-size: 35px;
 			font-family: var(--fontChela);
 			margin-bottom: 10px;
 			letter-spacing: 1.5px;
 		}
 		
 		.sobre p {
-			font-size: 16px;
+			font-size: 18.5px;
 			font-family: var(--fontJose);
 			letter-spacing: 0.5px;
 			line-height: 20px;
@@ -285,7 +285,7 @@
 			margin-top: 30px;
 			align-self: center;
 			text-transform: uppercase;
-			color: var(--quinta);
+			color: var(--sexta);
 			display: flex;
 			align-items: center;
 			letter-spacing: 0.5px;
@@ -443,9 +443,9 @@
 		
 		@media (max-width: 700px) {
 
-                       .navContent p {
-		         width: 95%;
-		       }
+      .navContent p {
+       width: 95%;
+      }
 			
 			.contato {
 				flex-direction: column;
@@ -514,19 +514,19 @@
 		}
 
 		[data-elemento="right"] {
-                 margin-left: 75px;
+       margin-left: 75px;
 		}
 		
 		.animationElementos {
-                 opacity: 1;
+     opacity: 1;
 		 margin: 0px;
 		}
 
-                /*======================
-			430 PX
+    /*======================
+					430 PX
 		======================*/
 
-                 @media (max-width: 430px) {
+    @media (max-width: 430px) {
 
 		   .navContent {
 		    padding: 30px;
@@ -536,7 +536,7 @@
 		    font-size: 26px;
 		   }
 
-	           .navContent p {
+	     .navContent p {
 		    font-size: 13.5px;
 		    line-height: 20px;
 		    letter-spacing: 0.9px;
@@ -548,12 +548,16 @@
 		    height: 38px;
 		    font-size: 16px;
 		   }
-
+				
+			 .content {
+			 	
+			 }
+			 
 		   .content h1 {
 		    font-size: 29px;
 		   }
 
-	           .content p {
+	     .content p {
 		    font-size: 12.5px;
 		    width: 88%;
 		   }
